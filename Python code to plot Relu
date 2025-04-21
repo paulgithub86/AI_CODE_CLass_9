@@ -1,0 +1,17 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+def plot_relu():
+    # Generate values for x
+    x = np.linspace(-10, 10, 100)
+
+    # Compute ReLU values for corresponding x
+    relu = np.maximum(0, x)
+
+    # Plot the ReLU function
+    plt.plot(x, relu)
+    plt.title("ReLU Activation Function")
+    plt.xlabel("x")
+    plt.ylabel("ReLU(x)")
+    plt.grid(True)
+    plt.show()
