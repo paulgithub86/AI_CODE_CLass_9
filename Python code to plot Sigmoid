@@ -1,0 +1,13 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+def plot_sigmoid():
+    x = np.linspace(-10, 10, 100)  # Generate 100 equally spaced values from -10 to 10
+    y = 1 / (1 + np.exp(-x))  # Compute the sigmoid function values
+    
+    plt.plot(x, y)
+    plt.xlabel('Input')
+    plt.ylabel('Sigmoid Output')
+    plt.title('Sigmoid Activation Function')
+    plt.grid(True)
+    plt.show()
