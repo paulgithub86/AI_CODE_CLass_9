@@ -1,0 +1,21 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+def plot_leaky_relu():
+    # Generate values for x
+    x = np.linspace(-10, 10, 100)
+
+    # Define the leaky ReLU function
+    def leaky_relu(x, alpha=0.1):
+        return np.where(x >= 0, x, alpha * x)
+
+    # Compute leaky ReLU values for corresponding x
+    leaky_relu_values = leaky_relu(x)
+
+    # Plot the leaky ReLU function
+    plt.plot(x, leaky_relu_values)
+    plt.title("Leaky ReLU Activation Function")
+    plt.xlabel("x")
+    plt.ylabel("Leaky ReLU(x)")
+    plt.grid(True)
+    plt.show()
